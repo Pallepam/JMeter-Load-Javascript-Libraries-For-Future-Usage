@@ -21,11 +21,11 @@
 	var load = function(js/* or [js,...]*/) {
 		if(js instanceof Array){
 			for(var i = 0; i < js.length; i++){
-				log.debug('------ load: '+ _jsPath + js[i] + '.js');
+				log.info('------ load: '+ _jsPath + js[i] + '.js');
 				_global.load(_jsPath + js[i] + '.js');
 			}			
 		}else{
-			log.debug('------ load: '+ _jsPath + js + '.js');
+			log.info('------ load: '+ _jsPath + js + '.js');
 			_global.load(_jsPath + js + '.js');
 		}
 		_reload.call(null);
